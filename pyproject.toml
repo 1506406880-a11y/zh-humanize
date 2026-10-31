@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zh-humanize"
+version = "0.1.0"
+description = "中文写作的 AI 痕迹体检：可复算的句法指标 + 带证据等级的改写协议"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [{ name = "zh-humanize contributors" }]
+keywords = ["chinese", "writing", "ai-text", "humanize", "style", "检测"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.scripts]
+zh-humanize = "zh_humanize.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["zh_humanize*"]
+
+[project.urls]
+Homepage = "https://github.com/1506406880-a11y/zh-humanize"
+Repository = "https://github.com/1506406880-a11y/zh-humanize"
+Issues = "https://github.com/1506406880-a11y/zh-humanize/issues"
